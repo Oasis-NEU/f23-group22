@@ -13,14 +13,14 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-main {
+  background-color: #e2dfd1;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 3rem;
   color: white;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.HeadingMain-secondLine {
+  text-align: center; 
+  font-size: 2rem;
+}
+
+header {
+  margin-top: 0px;
+}
+
+h1 {
+  margin-top: 0;
 }
