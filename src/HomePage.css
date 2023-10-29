@@ -1,0 +1,6 @@
+.Home-page {
+  flex-grow: 2;
+  overflow-y: auto; /* To allow scrolling */
+  height: 3000px;
+  
+}

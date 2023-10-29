@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [isSticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { 
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+
+    // This will handle the scroll whenever the user scrolls
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // Unbind the event listener on clean up
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Navbar
+    <nav className={`navbar navbar-expand-lg navbar-light bg-light ${isSticky ? "sticky" : ""}`}>
+<a className="navbar-brand" href="#">
+        Business Hub
       </a>
+
+      {/* Search bar */}
+      <form className="form-inline mr-4">
+        <input
+          className="form-control"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+
       <button
         className="navbar-toggler"
         type="button"
@@ -19,7 +50,8 @@ const Navbar = () => {
       </button>
 
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav">
+        {/* Added ml-auto to move items to the right */}
+        <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
             <a className="nav-link" href="#">
               Home <span className="sr-only">(current)</span>
