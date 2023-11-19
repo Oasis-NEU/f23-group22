@@ -59,12 +59,22 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Features
+              Business Showcase
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Pricing
+              Event
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Resources
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Resources
             </a>
           </li>
           <li className="nav-item dropdown">
