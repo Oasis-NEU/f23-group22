@@ -4,27 +4,28 @@ const Navbar = () => {
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+  
     const handleScroll = () => {
-      if (window.scrollY > 50) { 
+      if (window.scrollY >= navbarHeight) {
         setSticky(true);
       } else {
         setSticky(false);
       }
     };
-
-    // This will handle the scroll whenever the user scrolls
+  
     window.addEventListener("scroll", handleScroll);
-
+  
     return () => {
-      // Unbind the event listener on clean up
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   return (
     <nav className={`navbar navbar-expand-lg navbar-light bg-light ${isSticky ? "sticky" : ""}`}>
-<a className="navbar-brand" href="#">
-        Business Hub
+      <a className="navbar-brand" href="#">
+      Student Business Hub
       </a>
 
       {/* Search bar */}

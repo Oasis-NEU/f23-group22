@@ -1,6 +1,21 @@
-.Home-page {
-  flex-grow: 2;
-  overflow-y: auto; /* To allow scrolling */
-  height: 3000px;
-  
+.home-page {
+  /* no need to set height here; let the content determine the height */
+  background-color: #eeede8;
+  overflow-y: auto; /* Allows for scrolling if content exceeds the viewport */
 }
+
+.section {
+  padding: 50px; /* Add padding for spacing around the content */
+  margin-bottom: 20px; /* Add space between sections */
+  height: 2000px;
+}
+
+.introduction-section {
+
+}
+
+.about-section {
+
+}
+
+/* Rest of your styles */

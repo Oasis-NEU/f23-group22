@@ -1,7 +1,115 @@
+/* Ensure full width and fixed top positioning when sticky */
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000;  /* to ensure navbar stays on top of other content */
+  left: 0;
+  right: 0;
+  z-index: 1030; /* Bootstrap's default z-index for navbar is 1030 */
+  background-color: #ffffff; /* Change the color as needed */
+  border-bottom: 1px solid #e7e7e7; /* Adds a subtle border for separation */
+  padding: 0.5rem 1rem; /* Standard padding */
 }
+
+/* Bootstrap navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand/logo style */
+.navbar-brand {
+  padding-left: 10cm;;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Ensures the navbar-toggler is visible */
+.navbar-toggler {
+  background: none;
+  border: none;
+}
+
+/* Navbar toggler icon */
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Styles for the collapsible part of the navbar */
+.navbar-collapse {
+  flex-grow: 1; /* Ensures it takes up the necessary space */
+  align-items: center;
+}
+
+/* Styles for the navigation items */
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style individual navigation items */
+.nav-item {
+  margin: 0 0.5rem; /* Spacing between nav items */
+}
+
+/* Style for navigation links */
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Change the link color on hover */
+.nav-link:hover,
+.nav-link:focus {
+  color: #1a1a1a;
+  background-color: #f8f8f8;
+}
+
+/* Form inline styles for the search bar */
+.form-inline {
+  display: flex;
+}
+
+/* Input field in the navbar */
+.form-control {
+  border-radius: 0.25rem;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+  color: #333;
+}
+
+/* Dropdown item hover state */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f6f6f6;
+}
+
+/* Responsive adjustments might be necessary depending on your layout */
+@media (max-width: 991.98px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: flex;
+    flex-basis: auto;
+  }
+}
+
 
